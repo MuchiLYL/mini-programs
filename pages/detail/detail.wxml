@@ -1,0 +1,8 @@
+<!--pages/detail/detail.wxml-->
+<text>pages/detail/detail.wxml</text>
+
+<!-- 3、switchTab 跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面  ===》从非tabbar到tabbar -->
+
+<navigator url="../news/news" open-type="switchTab">3、switchTab 跳转到 tabBar 页面 </navigator>
+<!-- 5、navigateBack  关闭当前页面，返回上一页面或多级页面。 -->
+<navigator open-type="navigateBack"> 5、navigateBack </navigator>

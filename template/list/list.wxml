@@ -1,0 +1,8 @@
+<!--template/list/list.wxml-->
+<!-- 2、定义模板 -->
+<template name="list">
+  <view class="list">
+    <view class="left">{{img}}</view>
+    <view class="right">{{info}}</view>
+  </view>
+</template>

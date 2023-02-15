@@ -1,0 +1,14 @@
+/* template/list/list.wxss */
+.list{
+  display: flex;
+  margin: 30rpx 0;
+}
+.list .left{
+  width: 240rpx;
+  height: 240rpx;
+  background-color: skyblue;
+}
+.list .right{
+  flex: 1;
+  background-color: yellowgreen;
+}

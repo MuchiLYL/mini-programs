@@ -1,0 +1,72 @@
+<!--pages/mine/mine.wxml-->
+<text>pages/mine/mine.wxml</text>
+<view>{{msg}}</view>
+<view class="{{activeStr}}">属性上也可以使用模板语法</view>
+<checkbox checked="true"> Apple</checkbox>
+<checkbox checked="false"> Apple</checkbox>
+<!-- 特殊 -->
+<checkbox checked="{{true}}"> Apple</checkbox>
+<checkbox checked="{{false}}"> Apple</checkbox>
+<!-- 三目元算符 -->
+<view class="{{flag?'active':''}}">是否添加样式</view>
+<!-- 列表渲染 -->
+<view wx:for="{{info}}" wx:key="index">{{item}}---{{index}}</view>
+
+<view wx:for="{{info}}" wx:key="i" wx:for-item='ele' wx:for-index='i'>{{ele}}---{{i}}</view>
+
+<block wx:for="{{info}}" wx:key="index">
+  <view>{{item}}</view>
+  <view>{{index}}</view>
+</block>
+
+<!-- 条件渲染 -->
+<view wx:if="{{flag}}">显示隐藏</view>
+<view wx:else>隐藏</view>
+
+<view wx:if="{{length>5}}"> >5 </view>
+<view wx:elif="{{length>3}}"> >3 </view>
+<view wx:else> 3 </view>
+
+<block wx:if="{{!flag}}">
+  <view>view1</view>
+  <view>view2</view>
+</block>
+
+<!-- hidden  值是true:隐藏； false :显示-->
+<view hidden="{{flag}}">hidden</view>
+<view hidden="{{3<2}}">易烊千玺</view>
+
+<!-- 事件  注意：不能加（） -->
+<view bindtap="fatherTap">
+  <button bindtap="childTap">Child 冒泡</button>
+  <button catchtap="childTap" type="primary">Child 非冒泡事件</button>
+</view>
+<!-- 事件传参: data-参数名称='参数值' -->
+<button bindtap="tapParams" data-id="123" data-user-name="username" data-userInfo="userinfo">事件传参</button>
+
+<!-- setData方法 -->
+<button bindtap="changeFlag" type="warn">修改flag</button>
+<view class="box" wx:if="{{flag}}"></view>
+
+<!-- 案例：点击高亮显示 -->
+<view wx:for="{{info}}" class="{{index==num?'active':''}}" bindtap="light" data-index="{{index}}" wx:key="index">{{item}}</view>
+
+<!-- template 模板  3、wxml中引入：<import src="相对路径"></import>-->
+<import src="../../template/list/list"></import>
+
+<!-- 4、使用 -->
+<view wx:for="{{list}}">
+  <!-- 模板传递数据 写法1： -->
+  <!-- <template is='list' data="{{item}}"></template> -->
+  <!-- 模板传递数据 写法2： -->
+  <template is='list' data="{{...item}}"></template>
+  
+</view>
+
+
+
+
+
+
+
+<view style="height: 1000rpx;"></view>

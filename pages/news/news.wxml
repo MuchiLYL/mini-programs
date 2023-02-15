@@ -1,0 +1,102 @@
+<!--pages/news/news.wxml-->
+<text>pages/news/news.wxml</text>
+
+<view class="box">块级元素</view>
+
+<text>Text 文本---span</text>
+<!-- 轮播图 -->
+<swiper class="swiper" autoplay	indicator-dots>
+  <swiper-item>
+    <image src="../../images/1.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="../../images/1.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="../../images/1.jpg"></image>
+  </swiper-item>
+</swiper>
+
+<!-- 可滚动视图区域。滑块 -->
+<scroll-view class="scroll-view" scroll-x="true"> 
+  <text>1</text>
+  <text>2</text>
+  <text>3</text>
+  <text>4</text>
+  <text>5</text>
+  <text>6</text>
+  <text>7</text>
+  <text>8</text>
+  <text>9</text>
+  <text>10</text>
+</scroll-view>
+
+<icon type="success" size="40"></icon>
+<icon type="waiting" size="40"></icon>
+<!-- 进度条 -->
+<view>
+  <progress percent="20" show-info></progress>
+</view>
+<view class="progress-box">
+  <progress percent="20" show-info stroke-width="3"/>
+</view>
+
+<view class="progress-box">
+  <progress percent="40" active stroke-width="3" />
+  <icon class="progress-cancel" type="cancel"></icon>
+</view>
+
+<view class="progress-box">
+  <progress percent="60" active stroke-width="13" />
+</view>
+
+<view class="progress-box">
+  <progress percent="80" color="#10AEFF" active stroke-width="3" />
+</view>
+
+
+<!-- 富文本 -->
+<rich-text></rich-text>
+
+<!-- 表单 -->
+<button type="primary">按钮</button>
+<button  disabled>按钮</button>
+<button loading>loading</button>
+<button open-type="share">share</button>
+
+<!-- 文本框 -->
+<input  placeholder='请输入内容' focus type="text"/>
+
+<!-- 导航 -->
+<!--
+    url	string		否	当前小程序内的跳转链接
+    open-type	string	navigate	否	跳转方式
+           1、 navigate 保留当前页面，跳转到应用内的某个页面。但是不能跳到 tabbar 页面
+          2、redirect  关闭当前页面，跳转到应用内的某个页面。但是不允许跳转到 tabbar 页面。
+          3、switchTab 跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面  ===》从非tabbar到tabbar
+          4、reLaunch  关闭所有页面，打开到应用内的某个页面
+          5、navigateBack  关闭当前页面，返回上一页面或多级页面。
+          6、 exit	退出小程序，target="miniProgram"时生效
+ -->
+<navigator url="../detail/detail" open-type="navigate">navigate 跳转到detail</navigator>
+<!-- 2、redirect -->
+<navigator url="../detail/detail" open-type="redirect">2、redirect</navigator>
+<!-- 3、switchTab -->
+
+<!-- 4、reLaunch  -->
+<navigator url="../detail/detail" open-type="reLaunch">4、reLaunch </navigator>
+
+<!-- 6、 exit	退出小程序 -->
+<navigator open-type="exit">6、 exit	退出小程序</navigator>
+
+<!-- 图片 -->
+<image src="../../images/1.jpg" style="height: 300rpx;width: 100%;"></image>
+
+
+
+
+
+
+<view style="height: 500rpx;"></view>
+
+
